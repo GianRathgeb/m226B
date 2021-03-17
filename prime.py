@@ -5,22 +5,12 @@ root = tk.Tk()
 root.geometry("200x400")
 
 def fnFindPrimes(intMax):
-    arrPrimes = []
-    position = 0
-    for num in range(0, int(inputField.get()) + 1):
-        # all prime numbers are greater than 1
-        if num > 1:
-            for i in range(2, num):
-                if (num % i) == 0:
-                    break
-            else:
-                arrPrimes.append([position, num])
-                position += 1
+    arrPrimes =  [x for x in range(2, intMax) if all(x % y != 0 for y in range(2, x))] 
     return arrPrimes
 
 def fnButtonClicked():
     primes = fnFindPrimes(int(inputField.get()))
-    for position, primeNumber in primes:
+    for position, primeNumber in enumerate(primes):
         listBox.insert(position, f"{position}: {primeNumber}")
 
 
