@@ -8,7 +8,6 @@ strFileName = ""
 while strFileName == "":
     strFileName = filedialog.askopenfilename()
 
-
 objFile = open(strFileName, "r")
 strFileContent = objFile.read()
 
