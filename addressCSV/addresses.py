@@ -1,6 +1,4 @@
 import tkinter as tk
-import csv
-
 root = tk.Tk()
 
 def fnFillValues(objBox, arrValues):
