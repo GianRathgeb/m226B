@@ -24,5 +24,3 @@ inputField.pack(padx = 20, pady = 3)
 listBox.pack(padx = 20, pady = 3)
 root.mainloop()
 
-
-
