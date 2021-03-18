@@ -10,13 +10,9 @@ def fnSortAddresses():
             row = row.replace('"', '').replace('\n', '')
             temp = row.split(";")
             if temp[1] == '':
-                for i in temp:
-                    strCompanies += f"{i} "
-                strCompanies += '\n'
+                strCompanies += f"{temp[0]};{temp[2]};{temp[3]} {temp[4]} {temp[5]}\n"
             else:
-                for i in temp:
-                    strPersones += f"{i} "
-                strPersones += '\n'
+                strPersones += f"{temp[0]}{chr(9)}{temp[1]} {temp[2]}{chr(9)}{temp[3]} {temp[4]} {temp[5]}\n"
     fnWriteToFile("Persones.txt", strPersones)
     fnWriteToFile("Companies.txt", strCompanies)
 

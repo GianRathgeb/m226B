@@ -1,18 +1,11 @@
 import tkinter as tk
-
-
 root = tk.Tk()
 root.geometry("200x400")
 
-def fnFindPrimes(intMax):
-    arrPrimes =  [x for x in range(2, intMax) if all(x % y != 0 for y in range(2, x))] 
-    return arrPrimes
-
 def fnButtonClicked():
-    primes = fnFindPrimes(int(inputField.get()))
+    primes = [x for x in range(2, int(inputField.get())) if all(x % y != 0 for y in range(2, x))]
     for position, primeNumber in enumerate(primes):
         listBox.insert(position, f"{position}: {primeNumber}")
-
 
 
 button = tk.Button(root, text = "Show Primes in range", command = fnButtonClicked)
