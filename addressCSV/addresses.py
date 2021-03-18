@@ -27,6 +27,3 @@ listBoxAddresses.grid(column=0, row=1)
 listBoxClientNumber.grid(column=1, row=1)
 
 root.mainloop()
-
-
-
