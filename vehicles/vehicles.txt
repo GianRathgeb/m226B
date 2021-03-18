@@ -1,0 +1,6 @@
+﻿Speed;Cleanness;Number;Wheels;Doors;MaxPayload
+150;yes;TG 12345;WP 225x40x18;4;
+90;no;ZH 200800;SP 295x85x22;;20t
+60;yes;AG 62645;WP 175x60x16;2;
+100;no;SH 50850;SP 205x50x15;1.5t
+
