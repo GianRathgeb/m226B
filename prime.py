@@ -3,6 +3,7 @@ root = tk.Tk()
 root.geometry("200x400")
 
 def fnButtonClicked():
+    listBox.delete(0, tk.END)
     primes = [x for x in range(2, int(inputField.get())) if all(x % y != 0 for y in range(2, x))]
     for position, primeNumber in enumerate(primes):
         listBox.insert(position, f"{position}: {primeNumber}")
